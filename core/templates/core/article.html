@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Formulario Creación Articulo{% endblock %}
+
+{% block header_content %}
+<div class="container bg-dark text-white p-2 my-4 text-center">
+    <h2>Lista de Artículos en la BBDD</h2>
+</div>
+{% endblock %}
+
+{% block main_content %}
+<div class="container my-4">
+    <div class="row">
+        <ul>
+            {% for a in articulos %}
+                <li>{{a.name}} | {{a.address}} | {{a.price}} | {{a.category}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="row">
+        <a class="btn btn-outline-success" href="{% url 'create-article' %}">Nuevo Artículo</a>
+    </div>
+</div>
+{% endblock %}
+

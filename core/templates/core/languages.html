@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block header_content %}
+<div class="container bg-dark text-white p-4 my-4 text-center">
+    <h1>{{title}}</h1>
+</div>
+{% endblock %}
+
+{% block main_content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <!--Comentarios-->
+            {% if languages %}
+            <ul>
+                {% for lang in languages %}
+                    <li>{{lang}}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <p>No hay lenguajes de programación para mostrar...</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

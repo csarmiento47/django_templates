@@ -1,0 +1,143 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block header_content %}
+<!--Carrousel-->
+<div class="container-fluid mt-2">
+    <div id="carouselIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'core/img/0001-1000x300.jpg' %}" class="d-block w-100" alt="Playa">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/0002-1000x300.jpg' %}" class="d-block w-100" alt="Montaña">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/0003-1000x300.jpg' %}" class="d-block w-100" alt="Cactus">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/0004-1000x300.jpg' %}" class="d-block w-100" alt="Sendero">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/0005-1000x300.jpg' %}" class="d-block w-100" alt="Bosque">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'core/img/0006-1000x300.jpg' %}" class="d-block w-100" alt="Lago">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!--Fin Carrousel-->
+{% endblock %}
+
+{% block main_content %}
+<main class="container-fluid my-4">
+    <section class="container py-4">
+        <div class="row py-5 justify-content-center">
+            <div class="col-12 col-sm-8 col-md-6">
+                <div class="card text-center border-0">
+                    <img src="{% static 'core/img/we-work.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h2 class="card-title">¿Donde nos juntamos?</h2>
+                        <p class="card-text">
+                            Todos los martes y viernes, de 19:00 a 22:00 en We Work, <br />
+                            Calle Baker 133, Providencia, Santiago.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row p-5 bg-terracota justify-content-center">
+            <div class="col-12 col-sm-8 ">
+                <div class="card mb-3 border-0 bg-transparent text-white">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{% static 'core/img/speaker.jpg' %}" class="border-0 img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body border-0">
+                                <h2 class="card-title">Próxima charla</h2>
+                                <h3 class="card-title">Big Data para Noobs</h3>
+                                <h4 class="card-title fs-5">Rafaela Valdéz</h4>
+                                <span class="font-monospace fs-6">
+                                    Data Scientist, PhD Theoretical Physics, Carneige Mellon University.
+                                </span>
+                                <p class="card-text">
+                                    En esta charla revisaremos las técnicas y tecnologías que hacen que sea
+                                    económico hacer frente a los datos a una escala extrema.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row p-4 justify-content-center">
+            <div class="row my-4 text-center">
+                <h2>Eventos anteriores</h2>
+            </div>
+            <div class="row gx-5">
+                <div class="col-md-4 mb-3 text-center">
+                    <a class="text-dark link-underline link-underline-opacity-0" href="#">
+                        <div class="card border-0">
+                            <img src="{% static 'core/img/simposio-vegan.jpg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-text">Simposio Vegan DB</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3 text-center">
+                    <a class="text-dark link-underline link-underline-opacity-0" href="#">
+                        <div class="card border-0">
+                            <img src="{% static 'core/img/machine-learning.jpg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-text">Machine learning 101</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-3 text-center">
+                    <a class="text-dark link-underline link-underline-opacity-0" href="#">
+                        <div class="card border-0">
+                            <img src="{% static 'core/img/scrum-sin-scream.jpg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h4 class="card-text">Scrum sin scream</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

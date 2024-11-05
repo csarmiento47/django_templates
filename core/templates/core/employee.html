@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block header_content %}
+<div class="container bg-dark text-white p-2 my-4 text-center">
+    <h2>Lista de Empleados en la BBDD</h2>
+</div>
+{% endblock %}
+
+{% block main_content %}
+<div class="container my-4">
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>RUT</th>
+                        <th>Nombre</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Email</th>
+                        <th>Fecha Creación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for e in empleados %}
+                    <tr>
+                        <td>{{e.rut}}</td>
+                        <td>{{e.name}} {{e.lastname}}</td>
+                        <td>{{e.dob}}</td>
+                        <td>{{e.email}}</td>
+                        <td>{{e.created_at}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <a class="btn btn-outline-success" href="{% url 'create-employee' %}">Nuevo Empleado</a>
+    </div>
+</div>
+{% endblock %}

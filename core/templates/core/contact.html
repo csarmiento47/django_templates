@@ -1,0 +1,137 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block main_content %}
+<main>
+    <section class="container my-4">
+        <div class="row">
+            <div class="col-md-6 justify-content-center">
+                <form action="#" method="get" name="form">
+                    <div class="card">
+                        <div class="card-header bg-secondary">
+                            <h2 class="card-title fw-bold fst-italic">Ingrese su datos</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com"
+                                    required autocomplete="false">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-bold">Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="rut" class="form-label fw-bold">Rut</label>
+                                <input type="text" class="form-control" id="rut" placeholder="12345678-9">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre_completo" class="form-label fw-bold">Nombre completo</label>
+                                <input type="text" class="form-control" id="nombre_completo"
+                                    placeholder="Ej. Esteban Dido">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="fecha_nacimiento" class="form-label fw-bold">Fecha Nacimiento</label>
+                                <input type="date" class="form-control" id="fecha_nacimiento" min="1900-01-01"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="hora_nacimiento" class="form-label fw-bold">Hora nacimiento</label>
+                                <input type="time" class="form-control" id="hora_nacimiento">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Genero</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="femenino"
+                                        checked>
+                                    <label class="form-check-label" for="femenino">
+                                        Femenino
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="masculino">
+                                    <label class="form-check-label" for="masculino">
+                                        Masculino
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="genero" id="roca">
+                                    <label class="form-check-label" for="roca">
+                                        Soy una roca
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Lenguajes de programación
+                                    preferidos:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="python" id="python">
+                                    <label class="form-check-label" for="python">
+                                        Python
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="java" id="java">
+                                    <label class="form-check-label" for="java">
+                                        Java
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="csharp" id="csharp">
+                                    <label class="form-check-label" for="csharp">
+                                        C#
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="javascript"
+                                        id="javascript">
+                                    <label class="form-check-label" for="javascript">
+                                        Javascript
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="area_desarrollo" class="form-label fw-bold">En que área te quieres
+                                    desenvolver</label>
+                                <select class="form-select" id="area_desarrollo">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="fullstack">Full Stack</option>
+                                    <option value="front-end">Front End</option>
+                                    <option value="back-end">Back End</option>
+                                    <option value="uxui">Diseñador UX/UI</option>
+                                    <option value="coffee">Preparar café y galletitas</option>
+                                </select>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea name="comentarios" id="comentarios" class="form-control"></textarea>
+                                <label for="comentarios">Comentarios</label>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="terminos_condiciones" checked>
+                                    <label class="form-check-label" for="terminos_condiciones">Acepto los términos y condiciones</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="row">
+                                <div class="form-group">
+                                    <input id="enviar" type="submit" class="btn btn-primary m-2" value="Enviar">
+                                    <input id="limpiar" type="reset" class="btn btn-outline-secondary m-2" value="Cancelar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 d-none d-md-block text-center">
+                <img src="http://picsum.photos/600/1000" class="img-fluid w-100 h-100" alt="Lala">
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
